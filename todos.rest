@@ -1,0 +1,33 @@
+GET http://localhost:9000/todos
+
+
+###
+POST http://localhost:9000/todos
+content-type: application/json
+
+{
+  "id": 4, "content": "test", "completed": false
+} 
+
+
+###
+PATCH http://localhost:9000/todos
+content-type: application/json
+
+{
+  "completed": false
+}
+
+###
+# payload => {content} or {completed}
+PATCH http://localhost:9000/todos/3
+content-type: application/json
+
+{
+  "completed": true
+}
+###
+DELETE http://localhost:9000/todos/3
+
+###
+DELETE http://localhost:9000/todos?completed=true
